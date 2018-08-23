@@ -4,7 +4,6 @@ from requests.compat import urljoin
 from bs4 import BeautifulSoup
 
 URL = 'https://www.kagawa-u.ac.jp/kagawa-u_eng/'
-images= []
 
 def download_images(url):
     soup = BeautifulSoup(requests.get(url).content, 'lxml')
