@@ -26,8 +26,6 @@ def get_image(keyword):
     elems = html.select('.rg_meta.notranslate')
     counter = 0
     
-    print('start')
-    
     for ele in elems:
         ele = ele.contents[0].replace('"','').split(',')
         eledict = dict()
@@ -63,8 +61,6 @@ def get_image(keyword):
             continue
         except error.HTTPError:
             continue
-
-    print('stop')
 
 def main():
     # keywordは２つまで
